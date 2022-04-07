@@ -22,8 +22,23 @@
         pkgs = import nixpkgs { inherit system; config = packageOverrides; };
         lib = pkgs.lib;
 
+
+
       in rec {
         defaultPackage = pkgs.hello;
+
+        packages = {
+          default = pkgs.hello;
+
+          docker = let
+            jre = "adoptopenjdk-jre-openj9-bin-11";
+            imgName = "base-jre";
+          in pkgs.dockerTools.buildLayeredImage {
+            name      = imgName;
+            tag       = "latest";
+            contents  = [ pkgs.${jre} ];
+          };
+        };
 
         devShell = with pkgs; mkShell {
           name = "scala";
