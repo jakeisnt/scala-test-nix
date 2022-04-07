@@ -1,5 +1,5 @@
 package jakeisnt.scalatestnix
 
 object Hello extends App {
-  println("Hello from sbt-nix-bootstrap!")
+  println("whaat from sbt-nix-bootstrap!")
 }

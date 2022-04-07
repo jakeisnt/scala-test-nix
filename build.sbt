@@ -1,7 +1,7 @@
 import Dependencies._
 import com.typesafe.sbt.packager.docker._
 
-ThisBuild / scalaVersion     := "3.0.0"
+ThisBuild / scalaVersion     := "2.13.8"
 ThisBuild / version          := "0.1.0-SNAPSHOT"
 ThisBuild / organization     := "jakeisnt"
 
