@@ -31,6 +31,7 @@
             coursier
             sbt
             pkgs.${jdk}
+            metals
           ];
         };
     });
