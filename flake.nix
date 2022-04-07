@@ -24,6 +24,7 @@
 
       in rec {
         defaultPackage = pkgs.hello;
+
         devShell = with pkgs; mkShell {
           name = "scala";
           buildInputs = [
